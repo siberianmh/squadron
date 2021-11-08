@@ -1,0 +1,9 @@
+{
+  "name": "@squadron/forge-publisher",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.6.6"
+  }
+}
