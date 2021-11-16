@@ -15,11 +15,9 @@ class Updater {
     }
 
     this.appSlug = opts.appSlug
-
-    this.initUpdater()
   }
 
-  private initUpdater() {
+  public initUpdater() {
     return app.isReady()
       ? this.useUpdater()
       : app.whenReady().then(() => this.useUpdater())
