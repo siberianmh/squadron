@@ -1,0 +1,10 @@
+{
+  "name": "@squadron/updater",
+  "description": "A Squadron partner for your Electron application",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
