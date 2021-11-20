@@ -4,5 +4,9 @@
   "private": true,
   "workspaces": [
     "packages/**"
-  ]
+  ],
+  "dependencies": {
+    "@types/node": "^16.11.9",
+    "typescript": "^4.5.2"
+  }
 }

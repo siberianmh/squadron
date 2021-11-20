@@ -17,7 +17,7 @@ export default class PublisherSquadron extends PublisherBase<IPublisherSquadronC
     }
 
     if (!opts.token) {
-      this.config.token = process.env.SQUADRON_UPLOAD_TOKEN
+      this.config.token = process.env.SQUADRON_TOKEN
     }
 
     this.config.appId = opts.appId
@@ -71,7 +71,7 @@ export default class PublisherSquadron extends PublisherBase<IPublisherSquadronC
         }
 
         const response = await fetch(
-          `${config.baseURL}/app/${config.appId}/upload`,
+          `${config.baseURL}/apps/${config.appId}/upload`,
           {
             headers: {
               Authorization: `Bearer ${config.token}`,
