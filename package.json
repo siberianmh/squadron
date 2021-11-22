@@ -5,8 +5,17 @@
   "workspaces": [
     "packages/**"
   ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "lint": "prettier --check \"./**/*.{ts,tsx,js,yaml,yml}\"",
+    "lint:fix": "yarn lint --write",
+    "ci:version": "yarn changeset version",
+    "ci:release": "yarn build && yarn changeset publish"
+  },
   "dependencies": {
+    "@changesets/cli": "^2.18.0",
     "@types/node": "^16.11.9",
+    "prettier": "^2.4.1",
     "typescript": "^4.5.2"
   }
 }
