@@ -5,7 +5,7 @@
 ```js
 // Within the publishers array:
 {
-  name: '@squadron/forge-publisher',
+  name: '@squadrondev/forge-publisher',
   config: {
     appId: '1',
     // See settings for the token, by default use "process.env.SQUADRON_TOKEN"

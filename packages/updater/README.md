@@ -3,7 +3,7 @@
 ## Usage
 
 ```ts
-import { updater } from '@squadron/updater'
+import { updater } from '@squadrondev/updater'
 
 updater({
   ...opts,

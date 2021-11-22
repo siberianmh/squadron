@@ -1,4 +1,4 @@
-# @squadron/updater
+# @squadrondev/updater
 
 ## 0.0.1
 

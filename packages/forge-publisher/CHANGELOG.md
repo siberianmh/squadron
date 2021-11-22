@@ -1,4 +1,4 @@
-# @squadron/forge-publisher
+# @squadrondev/forge-publisher
 
 ## 0.0.1
 
