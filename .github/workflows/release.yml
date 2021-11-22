@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Install deps
+        run: yarn install
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@master
