@@ -1,8 +1,7 @@
 {
   "name": "@squadron/updater",
-  "description": "A Squadron partner for your Electron application",
+  "description": "A Squadron updater for Electron application",
   "version": "0.0.0",
-  "private": true,
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

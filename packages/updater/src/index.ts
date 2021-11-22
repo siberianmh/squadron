@@ -24,10 +24,12 @@ class Updater {
   }
 
   private useUpdater() {
-    const feedURL = `${this.host}/apps/${this.appSlug}/${process.platform}/${process.arch}`
+    const suffix = process.platform === 'darwin' ? '/RELEASES.json' : ''
+    const feedURL = `${this.host}/apps/${this.appSlug}/${process.platform}/${process.arch}${suffix}`
 
     autoUpdater.setFeedURL({
       url: feedURL,
+      serverType: 'json',
     })
 
     autoUpdater.on('error', (err) => {
