@@ -2,4 +2,4 @@
 '@squadrondev/forge-publisher': patch
 ---
 
-fix: use version field from packageJSON
+fix: use `version` field from `packageJSON`

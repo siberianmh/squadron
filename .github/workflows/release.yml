@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - '**/package.json'
-      - '.chageset/**'
+      - '.changeset/**'
       - '.github/workflows/release.yml'
 
 jobs:

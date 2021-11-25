@@ -1,7 +1,15 @@
 import { app, autoUpdater } from 'electron'
 
 export interface IOptions {
+  /**
+   * The app slug
+   */
   readonly appSlug: string
+  /**
+   * @param {string} host The server which will be used for updates.
+   *
+   * @default `https://api.squadron.dev`
+   */
   readonly host?: string
 }
 
