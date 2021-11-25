@@ -52,13 +52,12 @@ export default class PublisherSquadron extends PublisherBase<IPublisherSquadronC
       const msg = `Uploading result (${resultIdx + 1}/${
         collapsedResults.length
       })`
-      // console.debug(msg)
 
       await asyncOra(msg, async () => {
         const data = new FormData()
         data.append('platform', makeResult.platform)
         data.append('arch', makeResult.arch)
-        data.append('version', makeResult.packageJSON)
+        data.append('version', makeResult.packageJSON.version)
 
         let artifactIdx = 0
         for (const artifactPath of makeResult.artifacts) {
