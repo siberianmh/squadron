@@ -1,0 +1,42 @@
+---
+title: Uploading Releases
+---
+
+## Using with popular tools
+
+Squadron is propose an easy way to upload the releases to service using an SDK
+or plugins for popular tools. If the framework or way is not listed below feel
+free to [propose them](https://github.com/siberianmh/feedback).
+
+### Electron Forge
+
+The simple way to upload releases to Squadron is to use
+[Electron Forge](https://electronforge.io) to build and publish your
+application. You will find the detailed instruction on your application page.
+
+Check out publisher documentation at the
+[related repository](https://github.com/siberianmh/squadron).
+
+## Using API
+
+There is a upload endpoint in Squadron which can be used to upload your
+application, you need to provide the parameters listed below as a POST request
+with a FormData body:
+
+```http
+POST api.squadron.dev/app/:appId/upload
+Headers:
+  Authorization: <ApplicationUploadToken>
+Body:
+  platform: String - One of 'darwin', 'win32'
+  arch: String - One of 'ia32' and 'x64'
+  version: String
+Files:
+  <String>: File
+```
+
+Please note that any files you wish to release must be attached to the body of
+the request, you can use any key you want to add the file to the body.
+
+Any non-200 status code means something went wrong, a helpful error message is
+normally included in the response.

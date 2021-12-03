@@ -1,0 +1,94 @@
+---
+title: Upgrading Application
+---
+
+## Using `@squadrondev/updater`
+
+Squadron a provides a
+[`@squadrondev/updater`](https://github.com/siberianmh/squadron) module that can
+be imported into your main process file in the following way.
+
+Install the module:
+
+```shell
+yarn add @squadrondev/updater
+```
+
+And then import:
+
+```ts
+import { updater } from '@squadrondev/updater'
+// Or using CJS
+const { updater } = require('@squadrondev/updater')
+
+updater({
+  appSlug: 'fiddle',
+}).initUpdater()
+```
+
+## Using Electron `autoUpdater` module
+
+If you would to implement updates by yourself we provide the simple example
+below, about how this can be done.
+
+**Note**: Please ensure that the code below will only be executed in your
+packaged app, and not in development.
+
+```ts
+import { autoUpdater } from 'electron'
+```
+
+Next, construct the URL of the update server and tell `autoUpdater` about it:
+
+```ts
+const baseURL = `https://api.squadron.dev`
+// The macOS are use the `/RELEASES.json` suffix
+const suffix = process.platform === 'darwin' ? '/RELEASES.json' : ''
+const feedURL = `${this.host}/apps/:appSlug/${process.platform}/${process.arch}${suffix}`
+
+autoUpdater.setFeedURL({
+  url: feedURL,
+  serverType: 'json',
+})
+```
+
+And at the final, check for updates, the example below will check every 5
+minutes.
+
+```ts
+setInterval(() => {
+  autoUpdater.checkForUpdates()
+}, 5 * 60 * 1000)
+```
+
+The next steps is ensure that user will get notified when there's an update, the
+example below show the simple way with using `dialog` API, and
+[`autoUpdater.on('update-downloaded')`](https://www.electronjs.org/docs/latest/api/auto-updater#events)
+event:
+
+```ts
+autoUpdater.on('update-downloaded', () => {
+  const dialogOpts = {
+    type: 'info',
+    buttons: ['Restart', 'Later'],
+    title: 'Application Update',
+    message:
+      'A new version has been downloaded. Restart the application to apply the updates.',
+  }
+
+  dialog.showMessageBox(dialogOpts).then(({ response }) => {
+    if (response === 0) {
+      autoUpdater.quitAndInstall()
+    }
+  })
+})
+```
+
+Also make sure that errors are being handled.
+
+```ts
+autoUpdater.on('error', (message) => {
+  console.error('There was a problem updating the application')
+  console.error(message)
+})
+```

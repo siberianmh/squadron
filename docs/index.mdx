@@ -1,0 +1,35 @@
+---
+title: Getting Started
+---
+
+Squadron is a platform that provide update server for your Electron
+applications.
+
+In the following guide we will show how to use Squadron and perform updating.
+
+## Create the Application
+
+Before we can get started updating to need to create the application on
+Squadron, on the Dashboard page you can click `Create Application` and provide
+the name and slug for them.
+
+**Note:** The slug should be lowercased and not contain spaces. The slug is will
+be used in feed URL for
+[`autoUpdater`](https://www.electronjs.org/docs/latest/api/auto-updater) module.
+
+## Uploading Releases
+
+After need create the application, you need to upload the assets, you can use
+the [`Uploading Release Assets`](/squadron/topics/uploading) doc for more
+details.
+
+When you upload the release Squadron will create the responsible version which
+can be checked in the `Versions` tab, in this menu you also can promote this
+version as "Latest" which will be installed by default when requesting the
+Updating API.
+
+## Performing Updates
+
+The last step is to perform updating, you can see the
+[`Upgrading Application`](/squadron/topics/upgrading) doc for all information
+which you need to know.
