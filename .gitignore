@@ -6,6 +6,7 @@ dist
 .npmrc
 e2e-realtesting
 .eslintcache
+.turbo
 
 # Global
 *.log
