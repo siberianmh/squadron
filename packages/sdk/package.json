@@ -1,13 +1,14 @@
 {
-  "name": "@squadrondev/updater",
-  "description": "A Squadron updater for Electron application",
-  "version": "0.0.1",
+  "name": "@squadrondev/sdk",
+  "description": "An API wrapper for the Squadron",
+  "version": "0.0.0",
   "license": "MIT",
   "homepage": "https://squadron.dev",
   "bugs": {
     "url": "https://github.com/siberianmh/squadron/issues"
   },
   "keywords": [
+    "api",
     "squadron",
     "electron",
     "updater"
@@ -15,14 +16,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/siberianmh/squadron",
-    "directory": "packages/updater"
+    "directory": "packages/sdk"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "yarn tsc -p tsconfig.json"
   },
-  "devDependencies": {
-    "electron": "^16.0.4"
+  "dependencies": {
+    "node-fetch": "^2.6.6",
+    "form-data": "^4.0.0"
   }
 }

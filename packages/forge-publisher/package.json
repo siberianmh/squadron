@@ -3,6 +3,21 @@
   "description": "Squadron publisher for Electron Forge",
   "version": "0.0.2",
   "license": "MIT",
+  "homepage": "https://squadron.dev",
+  "bugs": {
+    "url": "https://github.com/siberianmh/squadron/issues"
+  },
+  "keywords": [
+    "squadron",
+    "electron",
+    "electron-forge",
+    "forge-publisher"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siberianmh/squadron",
+    "directory": "packages/forge-publisher"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
