@@ -1,11 +1,13 @@
 import { ISquadronOptions } from './lib/types'
-import { Application } from './api/application'
 import { Rest } from './lib/rest'
+import { Application } from './api/application'
+import { User } from './api/user'
 
 export class Squadron {
   public options: ISquadronOptions
   public rest: Rest
 
+  public user: User
   public application: Application
 
   public constructor(
@@ -17,6 +19,7 @@ export class Squadron {
 
     this.rest = new Rest(this)
 
+    this.user = new User(this)
     this.application = new Application(this)
   }
 }

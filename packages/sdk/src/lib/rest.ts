@@ -17,7 +17,7 @@ export class Rest {
     options: RequestInit,
   ): Promise<T> {
     try {
-      const url = new URL(`${this.squadron.options.host}/${path}`)
+      const url = new URL(`${this.squadron.options.host}${path}`)
 
       const response = await fetch(url, {
         headers: {
@@ -56,23 +56,26 @@ export class Rest {
     }
   }
 
-  public async get<T = any>(path: string, options: RequestInit): Promise<T> {
+  public async get<T = any>(path: string, options?: RequestInit): Promise<T> {
     return this.request(path, { method: 'GET', ...options })
   }
 
-  public async post<T = any>(path: string, options: RequestInit): Promise<T> {
+  public async post<T = any>(path: string, options?: RequestInit): Promise<T> {
     return this.request(path, { method: 'POST', ...options })
   }
 
-  public async patch<T = any>(path: string, options: RequestInit): Promise<T> {
+  public async patch<T = any>(path: string, options?: RequestInit): Promise<T> {
     return this.request(path, { method: 'PATCH', ...options })
   }
 
-  public async put<T = any>(path: string, options: RequestInit): Promise<T> {
+  public async put<T = any>(path: string, options?: RequestInit): Promise<T> {
     return this.request(path, { method: 'PUT', ...options })
   }
 
-  public async delete<T = any>(path: string, options: RequestInit): Promise<T> {
+  public async delete<T = any>(
+    path: string,
+    options?: RequestInit,
+  ): Promise<T> {
     return this.request(path, { method: 'DELETE', ...options })
   }
 }
