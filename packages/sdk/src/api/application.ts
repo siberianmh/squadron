@@ -3,12 +3,18 @@ import * as path from 'node:path'
 import * as fs from 'node:fs'
 import { IStandardUploadOptions } from '../lib/types'
 import { Squadron } from '../client'
+import { IApplication } from '../definitions'
 
 export class Application {
   private squadron: Squadron
 
   public constructor(squadron: Squadron) {
     this.squadron = squadron
+  }
+
+  public async list(): Promise<Array<IApplication>> {
+    const data = await this.squadron.rest.get('/apps')
+    return data
   }
 
   // TODO: Add support for array of artifacts
