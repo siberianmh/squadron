@@ -1,7 +1,7 @@
 {
   "name": "@squadrondev/updater",
   "description": "A Squadron updater for Electron application",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://squadron.dev",
   "bugs": {
