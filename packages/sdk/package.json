@@ -24,7 +24,7 @@
     "build": "yarn tsc -p tsconfig.json"
   },
   "dependencies": {
-    "node-fetch": "^2.6.6",
+    "node-fetch": "^3.2.0",
     "form-data": "^4.0.0"
   }
 }
