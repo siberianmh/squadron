@@ -23,6 +23,6 @@
     "build": "yarn tsc -p tsconfig.json"
   },
   "devDependencies": {
-    "electron": "^18.0.1"
+    "electron": "^18.3.5"
   }
 }

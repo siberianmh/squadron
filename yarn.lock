@@ -1181,10 +1181,10 @@ electron-rebuild@^3.2.6:
     tar "^6.0.5"
     yargs "^17.0.1"
 
-electron@^18.0.1:
-  version "18.0.1"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-18.0.1.tgz#70653ecee008bea8a4240da78d0f5a426bb24d50"
-  integrity sha512-8y3nxmK+v/tiuaR8yd4K83ApHxgomMIPAEl3J+2Jfv/D5G6M3KnvxNlNiNoTXI8uOegfmoqiDm5/2xlWFLzfLQ==
+electron@^18.3.5:
+  version "18.3.5"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-18.3.5.tgz#a589c2bfa3fe807914a055f54f665999329b739b"
+  integrity sha512-/GJ39X3ijpyZiOtYQ1ha5Ly0hWiIzF19CGEapM9euaM2AZrmt79x+MckQDXqJxOaVA9YHXju5Ho6b9pB9a/2pQ==
   dependencies:
     "@electron/get" "^1.13.0"
     "@types/node" "^16.11.26"
