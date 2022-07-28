@@ -1,7 +1,7 @@
 {
   "name": "@squadrondev/sdk",
   "description": "An API wrapper for the Squadron",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://squadron.dev",
   "bugs": {
