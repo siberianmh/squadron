@@ -20,7 +20,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "yarn tsc -p tsconfig.json"
+    "build": "rollup -c"
   },
   "devDependencies": {
     "electron": "^19.0.10"
