@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "esbuild": "^0.14.51",
-    "rollup": "^2.77.2",
+    "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-esbuild": "^4.9.1",
     "@changesets/cli": "^2.24.1",
