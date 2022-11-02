@@ -250,10 +250,21 @@
     human-id "^1.0.2"
     prettier "^1.19.1"
 
-"@electron-forge/async-ora@6.0.0-beta.65", "@electron-forge/async-ora@^6.0.0-beta.65":
+"@electron-forge/async-ora@6.0.0-beta.65":
   version "6.0.0-beta.65"
   resolved "https://registry.yarnpkg.com/@electron-forge/async-ora/-/async-ora-6.0.0-beta.65.tgz#2e9088942e55e7509550d821510ac17e8d3606b5"
   integrity sha512-CREk/7XQsg26q2l5s/oFG6GcomzKzWnpaeCKgRCWfdMleKvOubeDd/OA68LkzhLixMWYGbXCWLbHUhGTdGzcWA==
+  dependencies:
+    chalk "^4.0.0"
+    debug "^4.3.1"
+    log-symbols "^4.0.0"
+    ora "^5.0.0"
+    pretty-ms "^7.0.0"
+
+"@electron-forge/async-ora@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@electron-forge/async-ora/-/async-ora-6.0.0.tgz#5ca7b9369f07b383b874b76f48062ac9497e0b15"
+  integrity sha512-qRbdJRvpxpmSzoNh0YzsYFR7cKsgMwI4hRbaL8qstYHs4bvEzvtmrLLEUpfGM6rh0a3AAZDC67PbOBT0dhGLLw==
   dependencies:
     chalk "^4.0.0"
     debug "^4.3.1"
