@@ -31,19 +31,19 @@ importers:
     specifiers:
       '@electron-forge/publisher-base': ^6.0.4
       form-data: ^4.0.0
-      node-fetch: ^2.6.7
+      node-fetch: ^2.6.8
     dependencies:
       '@electron-forge/publisher-base': 6.0.4
       form-data: 4.0.0
-      node-fetch: 2.6.7
+      node-fetch: 2.6.8
 
   packages/sdk:
     specifiers:
       form-data: ^4.0.0
-      node-fetch: ^2.6.7
+      node-fetch: ^2.6.8
     dependencies:
       form-data: 4.0.0
-      node-fetch: 2.6.7
+      node-fetch: 2.6.8
 
   packages/updater:
     specifiers:
@@ -2611,8 +2611,8 @@ packages:
       semver: 7.3.8
     dev: false
 
-  /node-fetch/2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+  /node-fetch/2.6.8:
+    resolution: {integrity: sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
