@@ -1,4 +1,3 @@
-import * as FormData from 'form-data'
 import * as path from 'node:path'
 import * as fs from 'node:fs'
 import { IStandardUploadOptions } from '../lib/types'
@@ -30,6 +29,7 @@ export class Application {
     }
 
     // TODO: Add some index
+    // @ts-expect-error
     data.append('file0', fs.createReadStream(opts.artifactPath))
 
     this.squadron.rest.post(`/apps/${opts.appId}/upload`, {

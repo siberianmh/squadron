@@ -1,6 +1,4 @@
 import { URL } from 'url'
-import type { RequestInit } from 'node-fetch'
-import fetch from 'node-fetch'
 import { Squadron } from '../index'
 
 export class Rest {

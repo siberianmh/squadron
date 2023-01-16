@@ -22,9 +22,5 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c"
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.7",
-    "form-data": "^4.0.0"
   }
 }

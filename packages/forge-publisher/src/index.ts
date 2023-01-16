@@ -1,8 +1,6 @@
 import PublisherBase, { PublisherOptions } from '@electron-forge/publisher-base'
-import * as FormData from 'form-data'
 import * as fs from 'fs'
 import * as path from 'path'
-import fetch from 'node-fetch'
 import { IPublisherSquadronConfig } from './config'
 
 export default class PublisherSquadron extends PublisherBase<IPublisherSquadronConfig> {
@@ -67,6 +65,7 @@ export default class PublisherSquadron extends PublisherBase<IPublisherSquadronC
         if (path.basename(artifactPath).toLowerCase() === 'releases') {
           continue
         }
+        // @ts-expect-error
         data.append(`file${artifactIdx}`, fs.createReadStream(artifactPath))
         artifactIdx += 1
       }
