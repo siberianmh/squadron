@@ -24,6 +24,6 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@electron-forge/publisher-base": "^6.0.5"
+    "@electron-forge/publisher-base": "^6.1.1"
   }
 }
