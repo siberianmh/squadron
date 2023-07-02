@@ -1,15 +1,16 @@
-import { Squadron } from '../client'
+import { Reqeast } from '@siberianmh/reqeast'
 import { IUser } from '../definitions/user'
+import { Endpoints } from '../lib/endpoint'
 
 export class User {
-  private squadron: Squadron
+  private client: Reqeast<Endpoints>
 
-  public constructor(squadron: Squadron) {
-    this.squadron = squadron
+  public constructor(client: Reqeast) {
+    this.client = client
   }
 
   public async me(): Promise<IUser> {
-    const data = await this.squadron.rest.get<IUser>('/users/@me')
+    const data = await this.client.get('/users/@me')
     return data
   }
 }

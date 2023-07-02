@@ -1,18 +1,18 @@
 import * as path from 'node:path'
 import * as fs from 'node:fs'
+import { Reqeast } from '@siberianmh/reqeast'
 import { IStandardUploadOptions } from '../lib/types'
-import { Squadron } from '../client'
-import { IApplication } from '../definitions'
+import { Endpoints } from '../lib/endpoint'
 
 export class Application {
-  private squadron: Squadron
+  private client: Reqeast<Endpoints>
 
-  public constructor(squadron: Squadron) {
-    this.squadron = squadron
+  public constructor(client: Reqeast) {
+    this.client = client
   }
 
-  public async list(): Promise<Array<IApplication>> {
-    const data = await this.squadron.rest.get('/apps')
+  public async list() {
+    const data = await this.client.get('/apps')
     return data
   }
 
@@ -32,12 +32,18 @@ export class Application {
     // @ts-expect-error
     data.append('file0', fs.createReadStream(opts.artifactPath))
 
-    this.squadron.rest.post(`/apps/${opts.appId}/upload`, {
-      body: data,
-      headers: {
-        'content-type': 'multipart/form-data',
+    this.client.post(
+      'apps/:appId/upload',
+      {
+        ...data,
       },
-    })
+      { appId: opts.appId },
+      {
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+      },
+    )
 
     // TODO: We return something?
     return
