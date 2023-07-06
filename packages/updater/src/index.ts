@@ -66,9 +66,12 @@ class Updater {
     )
 
     autoUpdater.checkForUpdates()
-    setInterval(() => {
-      autoUpdater.checkForUpdates()
-    }, 5 * 60 * 1000)
+    setInterval(
+      () => {
+        autoUpdater.checkForUpdates()
+      },
+      5 * 60 * 1000,
+    )
   }
 }
 

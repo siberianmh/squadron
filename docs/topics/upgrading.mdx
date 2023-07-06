@@ -56,9 +56,12 @@ And at the final, check for updates, the example below will check every 5
 minutes.
 
 ```ts
-setInterval(() => {
-  autoUpdater.checkForUpdates()
-}, 5 * 60 * 1000)
+setInterval(
+  () => {
+    autoUpdater.checkForUpdates()
+  },
+  5 * 60 * 1000,
+)
 ```
 
 The next steps is ensure that user will get notified when there's an update, the
