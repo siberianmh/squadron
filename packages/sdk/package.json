@@ -24,6 +24,6 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@siberianmh/reqeast": "0.0.0"
+    "@siberianmh/reqeast": "^0.0.1"
   }
 }
