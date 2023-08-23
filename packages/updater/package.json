@@ -23,6 +23,6 @@
     "build": "rollup -c"
   },
   "devDependencies": {
-    "electron": "^25.3.2"
+    "electron": "^26.0.0"
   }
 }
