@@ -13,7 +13,7 @@
   "dependencies": {
     "esbuild": "^0.19.2",
     "rollup": "^3.28.1",
-    "rollup-plugin-dts": "^6.0.0",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "@changesets/cli": "^2.26.2",
     "turbo": "^1.10.12",
