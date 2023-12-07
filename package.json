@@ -18,7 +18,7 @@
     "@changesets/cli": "^2.26.2",
     "turbo": "^1.10.12",
     "prettier": "^3.0.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/node": "^20.5.3"
